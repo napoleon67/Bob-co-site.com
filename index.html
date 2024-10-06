@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bob Co Site</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('beach.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: left;
+            padding: 20px;
+            box-sizing: border-box;
+            position: relative; /* Z-index ayarlamaları için */
+        }
+
+        .text-container {
+            max-width: 90%;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            z-index: 1; /* Metni resmin üstünde tut */
+            position: relative;
+        }
+
+        .button-container {
+            margin-bottom: 20px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .button:hover {
+            background-color: #218838;
+        }
+
+        .moving-image {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            animation: move 2s infinite alternate;
+            position: absolute; /* Hareketli resmi sabit pozisyona al */
+            bottom: 10px; /* Alt tarafa sabitle */
+            right: 10px; /* Sağ tarafa sabitle */
+            z-index: 0; /* Metin ve diğer öğelerin arkasında kalır */
+        }
+
+        @keyframes move {
+            0% {
+                transform: translateY(-50px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .text-container {
+                padding: 10px;
+            }
+
+            .button {
+                font-size: 14px;
+                padding: 8px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="text-container">
+        <div class="button-container">
+            <a href="https://www.example1.com" class="button">ana sayfa</a>
+            <a href="жэьвэдэл рэю иэк ищл нщл" class="button">hakkında</a>
+            <a href="https://www.youtube.com/watch?v=aWt9bGilBa0" class="button">☭</a>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="button">nothing</a>
+        </div>
+        <h1>Merhaba arkadaşım</h1>
+        <p>Bu benim sitem</p>
+        <p>Ve bu Bob Co sitesi</p>
+        <h2>Ve bu Bob'un karşılaştırması</h2>
+        <p>Bob, 3×3×3 cm bir küp</p>
+        <p>Ve bununla ilgili başka şeyler</p>
+    </div>
+    
+    <div class="container">
+        <img src="kivi.jpg" alt="kivi" class="moving-image">
+    </div>
+</body>
+</html>
+
